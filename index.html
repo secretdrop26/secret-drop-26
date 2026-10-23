@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Drop 26 | Luxury & Streetwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #141414;
+            --gold-primary: #d4af37;
+            --gold-hover: #f3e5ab;
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            --text-color: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --border-gold: rgba(212, 175, 55, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Logo */
+        header {
+            text-align: center;
+            padding: 45px 20px 25px;
+            background: radial-gradient(circle at center, #1f1a0e 0%, var(--bg-color) 70%);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .logo-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .logo-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 6px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* Container Principale */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section CTA per Richiesta Catalogo / Prodotti */
+        .cta-box {
+            background: linear-gradient(145deg, #181818, #111111);
+            border: 2px solid var(--gold-primary);
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .cta-box h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #000;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb857;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+        }
+
+        .btn-instagram:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.5);
+        }
+
+        /* Sezioni Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            padding: 25px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .info-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-gold);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .logo-title {
+                font-size: 2.1rem;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-title">Secret Drop 26</h1>
+            <div class="logo-subtitle">Luxury & High-End Streetwear</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- CALL TO ACTION CONTATTO -->
+        <div class="cta-box">
+            <h2>Richiedi i Capi e il Catalogo</h2>
+            <p>I nostri drop sono esclusivi e a tiratura limitata. Per ricevere le foto dei prodotti disponibili, conoscere i prezzi riservati o richiedere un capo specifico, contattaci in privato:</p>
+            <div class="btn-group">
+                <a href="https://wa.me/393501063242?text=Ciao!%20Vorrei%20informazioni%20sui%20capi%20disponibili%20di%20Secret%20Drop%2026" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp 3501063242
+                </a>
+                <a href="https://instagram.com/secret_drop26" target="_blank" class="btn btn-instagram">
+                    <i class="fab fa-instagram"></i> Instagram @secret_drop26
+                </a>
+            </div>
+        </div>
+
+        <!-- INFORMAZIONI NEGOZIO -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3><i class="fas fa-crown"></i> Chi Siamo</h3>
+                <p><strong>Secret Drop 26</strong> è il tuo punto di riferimento per l'alta moda ed il luxury streetwear a prezzi vantaggiosi. Operiamo come rivenditori specializzati per offrirti pezzi esclusivi selezionati con la massima attenzione all'autenticità e allo stile.</p>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fas fa-tshirt"></i> Cosa Vendiamo</h3>
+                <p>Proponiamo i migliori marchi di lusso e streetwear: sneaker in edizione limitata, felpe, t-shirt, giacche e accessori ricercati dei brand più iconici del momento.</p>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fas fa-truck"></i> Spedizioni & Consegne</h3>
+                <p>
+                    • <strong>Consegne previste:</strong> 15 - 30 giorni lavorativi.<br>
+                    • <strong>Bari e dintorni:</strong> Spedizioni COMPRESE nel prezzo.<br>
+                    • <strong>Nord/Centro Italia ed Estero:</strong> Spedizione a parte calcolata in base alla destinazione.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Dove Puoi Trovarci</h3>
+                <p>Operiamo direttamente online con consegne dedicate nella zona di Bari e spedizioni veloci. Per consultare le disponibilità in tempo reale o effettuare un ordine, contattaci subito su WhatsApp o Instagram.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Secret Drop 26 — Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
